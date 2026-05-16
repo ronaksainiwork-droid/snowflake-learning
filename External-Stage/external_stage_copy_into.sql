@@ -1,4 +1,4 @@
--- External Stage and COPY INTO Practice
+--  External Stage and COPY INTO Practice
 -- Topics:
 -- Create Database
 -- Create Schema
@@ -65,6 +65,7 @@ list @regex2_db.external_stages_s3.aws_ext_stage;
 copy into regex2_db.reg_tables_schema.tags_t
 from @regex2_db.external_stages_s3.aws_ext_stage 
 file_format = (skip_header = 1) ; 
+select * from tags_t; -- check table afetr copy(load data
 
 
 
